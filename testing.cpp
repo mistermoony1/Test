@@ -15,13 +15,15 @@ int main()
    		tim.tv_sec = 0;
    		tim.tv_nsec = 10000;
 
+   	cout << "hello" << endl;
+
    	auto t1 = chrono::high_resolution_clock::now();
 
    	nanosleep(&tim, &tim2);
 
    	 auto t2 = chrono::high_resolution_clock::now();
 
-   	 cout << chrono::duration_cast<chrono::nanoseconds>(t2 - t1).count() << endl;
+   	 cout << chrono::duration_cast<chrono::nanoseconds>(t2 - t1).count() << endl << "hello" << endl;
    
 
 
